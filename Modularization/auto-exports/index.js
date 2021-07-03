@@ -2,7 +2,8 @@ const sapa = {
     greeting : "Selamat Pagi Semua !!!"
 };
 
+let nama = "deni permana";
 
 
-
-module.exports = sapa;
+// mengunakan objek literal
+module.exports = {sapa, nama};

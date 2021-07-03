@@ -1,3 +1,3 @@
-const sapa = require(".");
+const { sapa, nama } = require(".");
 
-console.log(sapa);
+console.log(sapa,nama);
