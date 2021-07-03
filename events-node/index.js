@@ -1,9 +1,16 @@
 const {EventEmitter} = require('events');
-const MyEventsEmitter = new EventEmitter();
+const MyeventsEmitter = new EventEmitter();
 
+// fungsi deklarasi
 const MakeCoffe = ({name})=>{
-    console.log(`Kopi ${name} telah dibuat!`);
+    console.log(`Kopi ${name} telah dibuat !`);
 };
 
-MyEventsEmitter.on('cofee-order', MakeCoffe );
-MyEventsEmitter.emit('cofee-order', {name: 'Tubruk'});
+const MakeBill = ({price})=>{
+    console.log(`Bill sebesar ${price} telah dibuat !`);
+};
+
+MyeventsEmitter.on('Coffee-order', MakeCoffe);
+MyeventsEmitter.on('Coffee-order', MakeBill);
+
+MyeventsEmitter.emit('Coffee-order', {name:"Tubruk", price: 1200000});
