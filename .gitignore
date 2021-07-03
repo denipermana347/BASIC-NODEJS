@@ -1,6 +1,7 @@
 # Modularization
-node-package-manager
-
+# node-package-manager
+package-lock.json
+package.json
 # Created by https://www.toptal.com/developers/gitignore/api/linux,visualstudiocode,mean
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,visualstudiocode,mean
 
