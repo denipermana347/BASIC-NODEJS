@@ -1,6 +1,6 @@
 const fs = require('fs');
 const TulisData = fs.createWriteStream('output.txt');
 
-writableStream.write('Ini merupakan teks baris pertama!\n');
-writableStream.write('Ini merupakan teks baris kedua!\n');
-writableStream.end();
+writeableStream.write('Ini merupakan teks baris pertama!\n');
+writeableStream.write('Ini merupakan teks baris kedua!\n');
+writeableStream.end();
