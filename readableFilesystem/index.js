@@ -1,17 +1,18 @@
 const fs = require('fs');
-
-const readableStream = fs.createReadStream('./article.txt', {
-    highWaterMark:10
+ 
+const readableStream = fs.createReadStream('readableFilesystem/article.txt', {
+    highWaterMark: 5
 });
-
-readableStream.on('readable', ()=>{
-    try{
-        ProcessingInstruction.stdout.write(`[${readableStream.read()}]`);
-    }catch(error){
-        console.log(error);
+ 
+readableStream.on('readable', () => {
+    try {
+        process.stdout.write(`[${readableStream.read()}]`);
+    } catch(error) {
+        // catch the error when the chunk cannot be read.
+        console.log(`Failed to read`)
     }
 });
-
-readableStream.on('end', ()=>{
+ 
+readableStream.on('end', () => {
     console.log('Done');
 });
